@@ -1,2 +1,2 @@
 Inicios Material Design
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/fcoartigas/Petagram/blob/master/preview.png)
