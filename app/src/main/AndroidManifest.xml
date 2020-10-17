@@ -17,6 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListaMascotas" />
+        <activity android:name=".MascotasFavoritas5"
+            android:parentActivityName=".ListaMascotas">
+            <!-- Soporte para version 4.0 o menores -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MascotasFavoritas5"></meta-data>
+        </activity>
     </application>
 
 </manifest>
