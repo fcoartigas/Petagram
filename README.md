@@ -1,1 +1,6 @@
-![alt text](https://github.com/fcoartigas/Petagram/blob/master/preview.png)
+# Pantallazos de la aplicación
+
+## Lista Mascotas
+
+
+## 5 Mascotas Favortias
