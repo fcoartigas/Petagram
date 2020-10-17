@@ -1,6 +1,6 @@
 # Pantallazos de la aplicación
 
-##Inicial
+## Inicial
 ![image](https://user-images.githubusercontent.com/44373129/96355481-849f6e80-10b8-11eb-8b8d-a328098bb205.png)
 
 ## Lista Mascotas
