@@ -19,9 +19,9 @@
             android:id="@+id/imgFoto"
             android:layout_width="@dimen/image_cardview"
             android:layout_height="@dimen/image_cardview"
-            android:src="@drawable/pet1"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pet1"
             tools:ignore="ContentDescription">
 
         </ImageView>
@@ -37,9 +37,10 @@
                 android:layout_width="@dimen/icon_cardview_width"
                 android:layout_height="@dimen/icon_cardview_height"
                 android:layout_weight="1"
-                android:background="@mipmap/bone_like"
-                tools:ignore="ContentDescription">
-            </ImageButton>
+                android:background="@android:color/transparent"
+                android:src="@mipmap/bone_like"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"></ImageButton>
 
             <TextView
                 android:id="@+id/tvNombreCV"
@@ -66,7 +67,9 @@
                 android:id="@+id/btnLikecount"
                 android:layout_width="@dimen/icon_cardview_width"
                 android:layout_height="@dimen/icon_cardview_height"
-                android:background="@mipmap/bone_count"
+                android:src="@mipmap/bone_count"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
                 android:layout_weight="1"
                 tools:ignore="ContentDescription">
             </ImageButton>

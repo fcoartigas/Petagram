@@ -1,6 +1,9 @@
 package artigas.com.petagram;
 
-public class Mascota {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Mascota implements Parcelable {
     private int foto;
     private int btnLikevote;
     private String nombre;
@@ -14,6 +17,30 @@ public class Mascota {
         this.numeroLikes = numeroLikes;
         this.btnLikecount = btnLikecount;
     }
+
+    public void updatebtncount (){
+        setNumeroLikes(getNumeroLikes() + 1);
+    }
+
+    public Mascota(Parcel in){
+        foto = in.readInt();
+        btnLikevote = in.readInt();
+        nombre= in.readString();
+        numeroLikes=in.readInt();
+        btnLikecount=in.readInt();
+    }
+
+    public static final Creator<Mascota> CREATOR = new Creator<Mascota>() {
+        @Override
+        public Mascota createFromParcel(Parcel in) {
+            return new Mascota(in);
+        }
+
+        @Override
+        public Mascota[] newArray(int size) {
+            return new Mascota[size];
+        }
+    };
 
     public int getFoto() {
         return foto;
@@ -35,23 +62,44 @@ public class Mascota {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
 
-    public int getNumeroLikes() {
+    public int getNumeroLikes()
+    {
         return numeroLikes;
     }
 
-    public void setNumeroLikes(int numeroLikes) {
+    public void setNumeroLikes(int numeroLikes)
+    {
         this.numeroLikes = numeroLikes;
     }
 
-    public int getBtnLikecount() {
+    public int getBtnLikecount()
+    {
         return btnLikecount;
     }
 
-    public void setBtnLikecount(int btnLikecount) {
+    public void setBtnLikecount(int btnLikecount)
+    {
         this.btnLikecount = btnLikecount;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(foto);
+        dest.writeInt(btnLikevote);
+        dest.writeString(nombre);
+        dest.writeInt(numeroLikes);
+        dest.writeInt(btnLikecount);
+
+    }
+
 }

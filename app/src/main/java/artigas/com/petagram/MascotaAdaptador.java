@@ -14,50 +14,70 @@ import java.util.ArrayList;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder>{
 
-    ArrayList<Mascota> mascotas;
+    private ArrayList<Mascota> mMascotasList;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
+
+    public static class MascotaViewHolder extends RecyclerView.ViewHolder{
+        public ImageView mImgFoto;
+        public ImageButton mBtnLikeVote;
+        public TextView mTvNombreCV;
+        public TextView mTvLikeCountCV;
+        public ImageButton mBtnLikeCount;
+
+        public MascotaViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
+            super(itemView);
+            mImgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
+            mBtnLikeVote   = (ImageButton)  itemView.findViewById(R.id.btnLikeVote);
+            mTvNombreCV    = (TextView)  itemView.findViewById(R.id.tvNombreCV);
+            mTvLikeCountCV = (TextView)  itemView.findViewById(R.id.tvLikeCountCV);
+            mBtnLikeCount  = (ImageButton)  itemView.findViewById(R.id.btnLikecount);
+
+            mBtnLikeVote.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
+        }
+    }
 
     public MascotaAdaptador(ArrayList<Mascota> mascotas) {
-        this.mascotas = mascotas;
+        mMascotasList = mascotas;
     }
 
     @NonNull
     @Override
     public MascotaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascota, parent, false);
-        return new MascotaViewHolder(v);
+        return new MascotaViewHolder(v, mListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MascotaViewHolder mascotaViewHolder, int position) {
-        Mascota mascota = mascotas.get(position);
-        mascotaViewHolder.imgFoto.setImageResource(mascota.getFoto());
-        //mascotaViewHolder.btnLikeVote.setImageResource(mascota.getBtnLikevote());
-        mascotaViewHolder.tvNombreCV.setText(mascota.getNombre());
-        mascotaViewHolder.tvLikeCountCV.setText(""+mascota.getNumeroLikes());
-        //mascotaViewHolder.btnLikeCount.setImageResource(mascota.getBtnLikecount());
+        Mascota currentMascota = mMascotasList.get(position);
+        mascotaViewHolder.mImgFoto.setImageResource(currentMascota.getFoto());
+        mascotaViewHolder.mBtnLikeVote.setImageResource(currentMascota.getBtnLikevote());
+        mascotaViewHolder.mTvNombreCV.setText(currentMascota.getNombre());
+        mascotaViewHolder.mTvLikeCountCV.setText(""+currentMascota.getNumeroLikes());
+        mascotaViewHolder.mBtnLikeCount.setImageResource(currentMascota.getBtnLikecount());
     }
 
     @Override
     public int getItemCount() {
-        return mascotas.size();
-    }
-
-    public static class MascotaViewHolder extends RecyclerView.ViewHolder{
-
-        private ImageView imgFoto;
-        private ImageButton btnLikeVote;
-        private TextView tvNombreCV;
-        private TextView tvLikeCountCV;
-        private ImageButton btnLikeCount;
-
-        public MascotaViewHolder(@NonNull View itemView) {
-            super(itemView);
-            imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
-            btnLikeVote   = (ImageButton)  itemView.findViewById(R.id.btnLikeVote);
-            tvNombreCV    = (TextView)  itemView.findViewById(R.id.tvNombreCV);
-            tvLikeCountCV = (TextView)  itemView.findViewById(R.id.tvLikeCountCV);
-            btnLikeCount  = (ImageButton)  itemView.findViewById(R.id.btnLikecount);
-        }
+        return mMascotasList.size();
     }
 
 }
