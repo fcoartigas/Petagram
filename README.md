@@ -1,11 +1,25 @@
 # Pantallazos de la aplicación
 
 ## Inicial
-![image](https://user-images.githubusercontent.com/44373129/96355481-849f6e80-10b8-11eb-8b8d-a328098bb205.png)
+![image](https://user-images.githubusercontent.com/44373129/96512471-e8e83c80-1236-11eb-9372-2967cc7b064e.png)
 
 ## Lista Mascotas
-![image](https://user-images.githubusercontent.com/44373129/96355496-a7318780-10b8-11eb-932d-bff06e544d73.png)
+![image](https://user-images.githubusercontent.com/44373129/96512548-09b09200-1237-11eb-8cd9-f443a1bb93f7.png)
+
+![image](https://user-images.githubusercontent.com/44373129/96512607-1cc36200-1237-11eb-8c61-4433b0911a47.png)
+
+
+![image](https://user-images.githubusercontent.com/44373129/96512655-2f3d9b80-1237-11eb-826b-b05f7e422ebd.png)
 
 
 ## 5 Mascotas Favortias
-![image](https://user-images.githubusercontent.com/44373129/96355565-35a60900-10b9-11eb-9ff0-69f33f5db7b7.png)
+
+![image](https://user-images.githubusercontent.com/44373129/96512712-49777980-1237-11eb-8842-2824b2660f87.png)
+
+
+![image](https://user-images.githubusercontent.com/44373129/96512776-5eeca380-1237-11eb-8fd2-cb03d515ff20.png)
+
+
+![image](https://user-images.githubusercontent.com/44373129/96512842-7a57ae80-1237-11eb-9c27-8ba8ae97b3a3.png)
+
+
