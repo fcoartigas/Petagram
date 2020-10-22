@@ -3,23 +3,23 @@
 ## Inicial
 ![image](https://user-images.githubusercontent.com/44373129/96512471-e8e83c80-1236-11eb-9372-2967cc7b064e.png)
 
-## Lista Mascotas
-![image](https://user-images.githubusercontent.com/44373129/96512548-09b09200-1237-11eb-8cd9-f443a1bb93f7.png)
+## AGREGANDO MENÚS
+![image](https://user-images.githubusercontent.com/44373129/96816870-7a50dd80-13f4-11eb-9526-0b90e4b60234.png)
 
-![image](https://user-images.githubusercontent.com/44373129/96512607-1cc36200-1237-11eb-8c61-4433b0911a47.png)
+### CONTACTO con JavaMail
+![image](https://user-images.githubusercontent.com/44373129/96816927-96ed1580-13f4-11eb-87b1-9c8d7d0cc2b4.png)
+
+### ACERCA DE
+![image](https://user-images.githubusercontent.com/44373129/96816986-c00da600-13f4-11eb-93b7-c3bb53093bfa.png)
+
+## FRAGMENTS
+
+### FRAGMENT 1
+![image](https://user-images.githubusercontent.com/44373129/96817042-dd427480-13f4-11eb-86b6-a5adda96ec7c.png)
+
+### FRAGMENT 2 con CircularImageView 
+![image](https://user-images.githubusercontent.com/44373129/96817138-12e75d80-13f5-11eb-9325-cbc2c415f5e2.png)
 
 
-![image](https://user-images.githubusercontent.com/44373129/96512655-2f3d9b80-1237-11eb-826b-b05f7e422ebd.png)
-
-
-## 5 Mascotas Favortias
-
-![image](https://user-images.githubusercontent.com/44373129/96512712-49777980-1237-11eb-8842-2824b2660f87.png)
-
-
-![image](https://user-images.githubusercontent.com/44373129/96512776-5eeca380-1237-11eb-8fd2-cb03d515ff20.png)
-
-
-![image](https://user-images.githubusercontent.com/44373129/96512842-7a57ae80-1237-11eb-9c27-8ba8ae97b3a3.png)
 
 
