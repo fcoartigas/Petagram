@@ -1,9 +1,13 @@
-package artigas.com.petagram;
+package artigas.com.petagram.pojo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Mascota implements Parcelable {
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Comparator;
+
+public class Mascota implements Parcelable, Comparable<Mascota> {
     private int foto;
     private int btnLikevote;
     private String nombre;
@@ -18,16 +22,16 @@ public class Mascota implements Parcelable {
         this.btnLikecount = btnLikecount;
     }
 
-    public void updatebtncount (){
+    public void updatebtncount() {
         setNumeroLikes(getNumeroLikes() + 1);
     }
 
-    public Mascota(Parcel in){
+    public Mascota(Parcel in) {
         foto = in.readInt();
         btnLikevote = in.readInt();
-        nombre= in.readString();
-        numeroLikes=in.readInt();
-        btnLikecount=in.readInt();
+        nombre = in.readString();
+        numeroLikes = in.readInt();
+        btnLikecount = in.readInt();
     }
 
     public static final Creator<Mascota> CREATOR = new Creator<Mascota>() {
@@ -62,28 +66,23 @@ public class Mascota implements Parcelable {
         return nombre;
     }
 
-    public void setNombre(String nombre)
-    {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public int getNumeroLikes()
-    {
+    public int getNumeroLikes() {
         return numeroLikes;
     }
 
-    public void setNumeroLikes(int numeroLikes)
-    {
+    public void setNumeroLikes(int numeroLikes) {
         this.numeroLikes = numeroLikes;
     }
 
-    public int getBtnLikecount()
-    {
+    public int getBtnLikecount() {
         return btnLikecount;
     }
 
-    public void setBtnLikecount(int btnLikecount)
-    {
+    public void setBtnLikecount(int btnLikecount) {
         this.btnLikecount = btnLikecount;
     }
 
@@ -102,4 +101,9 @@ public class Mascota implements Parcelable {
 
     }
 
+    @Override
+    public int compareTo(@NotNull Mascota o) {
+        return o.numeroLikes- this.numeroLikes;
+    }
 }
+

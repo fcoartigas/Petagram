@@ -5,13 +5,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
+import artigas.com.petagram.adapter.MascotaAdaptador;
+import artigas.com.petagram.pojo.Mascota;
 
 public class MascotasFavoritas5 extends AppCompatActivity {
 
     ArrayList<Mascota> mascotasFavoritasList;
+    ArrayList<Mascota> mascotasFavoritasTop5;
 
 
     private RecyclerView mRecyclerViewFavorita;
@@ -31,6 +36,8 @@ public class MascotasFavoritas5 extends AppCompatActivity {
 
         mascotasFavoritasList = getIntent().getParcelableArrayListExtra("MascotasFavoritas");
 
+        mascotasLikeTop5();
+
         buildRecyclerViewFavoritas();
 
     }
@@ -44,10 +51,22 @@ public class MascotasFavoritas5 extends AppCompatActivity {
         ((LinearLayoutManager) mLayoutManagerFavorita).setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerViewFavorita.setLayoutManager(mLayoutManagerFavorita);
 
-        mAdapterFavorita = new MascotaAdaptador(mascotasFavoritasList);
+        mAdapterFavorita = new MascotaAdaptador(mascotasFavoritasTop5);
         mRecyclerViewFavorita.setAdapter(mAdapterFavorita);
 
     }
 
+    public void mascotasLikeTop5(){
+
+        //Toast.makeText(this,Integer.toString(mascotasFavoritasList.size()), Toast.LENGTH_LONG).show();
+        Collections.sort(mascotasFavoritasList);
+        mascotasFavoritasTop5 = new ArrayList<Mascota>();
+
+        for (Mascota e: mascotasFavoritasList){
+            if (mascotasFavoritasTop5.size() < 5){
+                mascotasFavoritasTop5.add(e);
+            }
+        }
+    }
 
 }

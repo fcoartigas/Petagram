@@ -1,4 +1,4 @@
-package artigas.com.petagram;
+package artigas.com.petagram.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import artigas.com.petagram.pojo.Mascota;
+import artigas.com.petagram.R;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder>{
 

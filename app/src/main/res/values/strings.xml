@@ -3,4 +3,22 @@
     <string name="initial_button">Entrar</string>
     <string name="pnombre">nombre</string>
     <string name="plikecount">likecount</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acercade">Acerca de</string>
+
+    <string name="nombre_hit">Nombre completo</string>
+    <string name="email_hit">Email</string>
+    <string name="mensaje_hit">Mensaje</string>
+
+    <string name="button_enviar_mensaje">Enviar Comentario</string>
+
+    <string name="acerca_title">Acerca de Mi</string>
+    <string name="acerca_bio">Perro con 10 años de experiencia en desarollo de app para Android</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="appbar_scrolling_view_behavior">Behavior</string>
+
+    <string name="plikecountdetail">Count</string>
+
 </resources>
